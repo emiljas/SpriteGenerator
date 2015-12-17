@@ -2,7 +2,7 @@
 
 This is fork of [http://spritegenerator.codeplex.com/](http://spritegenerator.codeplex.com/).
 Changes:
-- C# library (original WindowsForms project)
+- C# library instead of  WindowsForms project
 - save png file but css file generation was deleted
 - list of coordinates on sprite is returned
 
