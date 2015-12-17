@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SpriteGenerator
 {
-    public class SpriteOutput
+    public enum LayoutMode
     {
+        Automatic = 0,
+        Horizontal,
+        Vertical,
+        Rectangular
     }
 }

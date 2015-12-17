@@ -5,27 +5,14 @@ using System.Text;
 
 namespace SpriteGenerator
 {
-    class LayoutProperties
+    public class LayoutProperties
     {
-        public string[] inputFilePaths; 
-        public string outputSpriteFilePath;
-        public string outputCssFilePath;
-        public string layout;
-        public int distanceBetweenImages; 
-        public int marginWidth;
-        public int imagesInRow;
-        public int imagesInColumn;
-
-        public LayoutProperties()
-        {
-            inputFilePaths = null;
-            outputSpriteFilePath = "";
-            outputCssFilePath = "";
-            layout = "";
-            distanceBetweenImages = 0;
-            marginWidth = 0;
-            imagesInRow = 0;
-            imagesInColumn = 0;
-        }
+        public List<InputFile> InputFilePaths { get; set; }
+        public string OutputSpriteFilePath { get; set; }
+        public LayoutMode LayoutMode { get; set; }
+        public int DistanceBetweenImages { get; set; }
+        public int MarginWidth { get; set; }
+        public int ImagesInRow { get; set; }
+        public int ImagesInColumn { get; set; }
     }
 }

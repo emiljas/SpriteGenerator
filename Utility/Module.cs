@@ -5,7 +5,8 @@ namespace SpriteGenerator.Utility
 {
     public class Module
     {
-        private int name;
+        private int id;
+        private int index;
         private int width;
         private int height;
         private int whiteSpace;
@@ -21,7 +22,7 @@ namespace SpriteGenerator.Utility
         /// <param name="_whiteSpace">Width of white space around the image.</param>
         public Module(int _name, Image _image, int _whiteSpace)
         {
-            name = _name;
+            index = _name;
 
             if (_image != null)
             {
@@ -72,12 +73,9 @@ namespace SpriteGenerator.Utility
             set { yCoordinate = value; }
         }
 
-        /// <summary>
-        /// Gets the name of the module.
-        /// </summary>
-        public int Name
+        public int Index
         {
-            get { return name; }
+            get { return index; }
         }
 
         /// <summary>
@@ -95,7 +93,7 @@ namespace SpriteGenerator.Utility
         /// <returns></returns>
         public Module Copy()
         {
-            Module copy = new Module(name, image, whiteSpace);
+            Module copy = new Module(index, image, whiteSpace);
             copy.xCoordinate = xCoordinate;
             copy.yCoordinate = yCoordinate;
             return copy;

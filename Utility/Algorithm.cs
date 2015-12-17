@@ -33,7 +33,7 @@ namespace SpriteGenerator.Utility
                 foreach (int insertationPoint in oTree.InsertationPoints())
                 {
                     OTree ot = oTree.Copy();
-                    ot.Insert(module.Name, insertationPoint);
+                    ot.Insert(module.Index, insertationPoint);
                     OT oT = new OT(ot, moduleList);
                     Placement pm = oT.Placement;
 

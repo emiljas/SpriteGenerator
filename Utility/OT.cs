@@ -20,7 +20,7 @@ namespace SpriteGenerator.Utility
         public OT(OTree ot, List<Module> _modules)
         {
             oTree = ot;
-            modules = _modules.ToDictionary(item => item.Name, item => item);
+            modules = _modules.ToDictionary(item => item.Index, item => item);
             placement = null;
         }
 
@@ -77,14 +77,14 @@ namespace SpriteGenerator.Utility
                     child.Y = contour.FindMax(child.X + child.Width);
 
                     //There is an egde in the vertical constraint graph, where the minimum is found
-                    constraintGraph.AddEdge(contour.WhereMax.Name, child.Name, child.X);
+                    constraintGraph.AddEdge(contour.WhereMax.Index, child.Index, child.X);
 
                     //Updating contour
                     contour.Update(child);
 
                     //Now child module is the actual parent
                     parent = child;
-                    stack.Push(parent.Name);
+                    stack.Push(parent.Index);
                 }
 
                 //Back step in DFS traversing
@@ -146,14 +146,14 @@ namespace SpriteGenerator.Utility
                     child.X = contour.FindMax(child.Y + child.Height);
 
                     //There is an egde in the horizontal constraint graph, where the minimum is found
-                    constraintGraph.AddEdge(contour.WhereMax.Name, child.Name, child.Y);
+                    constraintGraph.AddEdge(contour.WhereMax.Index, child.Index, child.Y);
 
                     //Updating contour
                     contour.Update(child);
 
                     //Now child module is the actual parent
                     parent = child;
-                    stack.Push(parent.Name);
+                    stack.Push(parent.Index);
                 }
 
                 //Back step in DFS traversing
