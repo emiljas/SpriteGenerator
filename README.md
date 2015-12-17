@@ -3,10 +3,25 @@
 zmiana tak żeby windows forms projekt użyć na canvasie
 
 
+```cs
+var sprite = new Sprite(new LayoutProperties
+{
+    InputFilePaths = new List<InputFile>
+    {
+        new InputFile { Id = 3456, Path = @"C:\imgs_to_join\a.jpg" },
+        new InputFile { Id = 7862, Path = @"C:\imgs_to_join\b.png" },
+        new InputFile { Id = 9876, Path = @"C:\imgs_to_join\c.jpg" },
+    },
+    OutputSpriteFilePath = @"C:\output.png"
+
+});
+var output = sprite.Create();
+```
+
 ```json
 {
 
-   "FilePath": "C:\\Users\\Emil\\Desktop\\imgs\\output.png",
+   "FilePath": "C:\\output.png",
 
    "Places": {
 
